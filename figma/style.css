@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding-top: 11px;
+    padding-bottom: 12px;
+}
+
+.top__content {
+    margin-top: 84px;
+    margin-bottom: 162px;
+}
+
+.title {
+    padding-bottom: 17;
+}
+
+.top_buttons {
+    padding-top: 37;
+}
