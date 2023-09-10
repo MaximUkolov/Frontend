@@ -4,6 +4,15 @@
 }
 
 .header {
+    margin-top: 40px;
+}
+
+.header__logo {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header__links {
     padding-top: 11px;
     padding-bottom: 12px;
 }
@@ -17,6 +26,11 @@
     padding-bottom: 17px;
 }
 
-.top_buttons {
-    padding-top: 37px;
+.subtitle {
+    padding-bottom: 37px;
+}
+
+.top__logos {
+    padding-top: 97px;
+    padding-bottom: 96px;
 }
