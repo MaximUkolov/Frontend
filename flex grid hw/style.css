@@ -1,36 +1,115 @@
 * {
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+.container {
+    width: 1170px;
+    height: 40px;
+    flex-shrink: 0;
+    margin: 0 auto;
+    margin-left: 300px;
+    margin-right: 350px;
+    margin-top: 40px;
+    display: flex; /*подключаем flex*/
+    justify-content: center; /*центрируем*/
+}
+
+.header_link {
+    text-decoration: none;
+    color: #000;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 15px;
+}
+
+.header_link1 {
+    text-decoration: none;
+    color: #F25822;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 15px;
+}
+
+.nav {
+    display: flex;
+}
+
+.header_logo {
+    padding-right: 500px;
+}
+
+.header_link:hover {
+    color: #42e191;
+}
+
+.header_link1:hover {
+    color: #42e191;
 }
 
 .header {
-    margin-top: 40px;
+    margin-bottom: 84px;
 }
 
-.header__logo {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.header__links {
-    padding-top: 11px;
-    padding-bottom: 12px;
-}
-
-.top__content {
-    margin-top: 84px;
-    margin-bottom: 162px;
+.main_right {
+    width: 544.814px;
+    height: 374.843px;
+    flex-shrink: 0;
 }
 
 .title {
-    padding-bottom: 17px;
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 17px;
 }
 
-.subtitle {
-    padding-bottom: 37px;
+.dsc {
+    color: #888;
+    font-family: Gilroy-Medium;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 37px;
 }
 
-.top__logos {
-    padding-top: 97px;
-    padding-bottom: 96px;
+.main_link1 {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background: #F25822;
+    color: #FFF;
+    font-family: Gilroy-Bold;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main_link {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    color: #AAA;
+    font-family: Gilroy-Bold;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 72px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_left, .main_right {
+    width: 47%;
+}
+
+.logos {
+    margin-top: 478px;
 }
