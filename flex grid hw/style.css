@@ -13,7 +13,7 @@ body {
     height: 40px;
     flex-shrink: 0;
     margin: 0 auto;
-    margin-left: 300px;
+    margin-left: 350px;
     margin-right: 350px;
     margin-top: 40px;
     display: flex; /*подключаем flex*/
