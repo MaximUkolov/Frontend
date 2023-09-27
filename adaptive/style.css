@@ -310,8 +310,8 @@ header {
     justify-content: center;
     gap: 15px;
   }
-  .product_content {
-    width: 70%;         /*доделать*/
-  }
+  /* .product_content {
+    max-block-size: ;       /*доделать
+  } */
 }
 
