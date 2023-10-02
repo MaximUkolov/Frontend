@@ -310,5 +310,8 @@ header {
     justify-content: center;
     gap: 15px;
   }
+  .product_content {
+    max-width: 329px;
+  }
 }
 
