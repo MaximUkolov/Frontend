@@ -326,6 +326,11 @@ header {
   color: #FBFBFB;
 }
 
+.button_text:hover {
+  background-color:#F26376;
+  color: #FBFBFB;  
+}
+
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .sale {
