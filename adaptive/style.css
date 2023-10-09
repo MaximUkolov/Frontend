@@ -357,6 +357,77 @@ header {
   font-family: Lato;
 }
 
+.head {
+  min-height: 148px;
+  background: #F1E4E6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #F16D7F;
+}
+
+.breadcrumb {
+  display: flex;
+}
+.breadcrumb__box-link:last-child .breadcrumb__link {
+  font-weight: 700;
+  color: #F16D7F;
+}
+.breadcrumb__box-link:not(:last-child)::after {
+  content: "/";
+  padding-left: 8px;
+  padding-right: 8px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #636363;
+}
+.breadcrumb__link {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #636363;
+}
+.breadcrumb:hover {
+  color: #F16D7F;
+}
+
+.slider {
+  height: 777px;
+  position: relative;
+  background: #F7F7F7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider__arrow {
+  background: rgba(42, 42, 42, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  top: 365px;
+}
+.slider__arrow_left {
+  left: 0;
+}
+.slider__arrow_right {
+  right: 0;
+}
+.slider__arrow:hover path {
+  fill: #F16D7F;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
   .sale {
     display: grid;

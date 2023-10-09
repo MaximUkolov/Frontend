@@ -1,3 +1,6 @@
+@import 'vars';
+
+
 * {
     margin: 0;
     padding: 0;
@@ -395,6 +398,92 @@
         }
     }
   }
+
+
+.head {
+    min-height: 148px;
+    background: #F1E4E6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $colorSite;
+    }    
+}
+
+.breadcrumb {
+    display: flex;
+    &__box-link:last-child .breadcrumb__link {
+        font-weight: 700;
+        color: $colorSite;
+    }    
+    &__box-link:not(:last-child)::after {
+        content: '/';
+        padding-left: 8px;
+        padding-right: 8px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #636363;
+    }    
+    &__link {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        color: #636363;
+    }    
+        &:hover {
+            color: $colorSite;
+        }        
+}
+
+
+.slider {
+    height: 777px;
+    position: relative;
+    background: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__arrow {
+        background: rgba(42, 42, 42, 0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 47px;
+        height: 47px;
+        position: absolute;
+        top: 365px;
+        &_left {
+            left: 0;
+        }
+        &_right {
+            right: 0;
+        }
+        &:hover path {
+            fill: $colorSite;
+        }
+    }
+}     
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   @media (max-width: 1024px) and (min-width: 768px) {
     .sale {
