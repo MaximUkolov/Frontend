@@ -110,23 +110,10 @@
     z-index: 2;
     position: absolute;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  // &_arrows_left {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
 }
 
-.left1 {
-  position: absolute;
-}
-
-.left2 {
-  position: relative;
-}
-  
   
   .promo_img {
     width: 50%;
@@ -284,7 +271,8 @@
     -webkit-box-shadow: 0 0 5px #fff;
     box-shadow: 0 0 5px #fff;
   }
-  
+
+
   .product__add:hover svg path {
     fill: #F16D7F;
   }
@@ -344,6 +332,8 @@
     line-height: normal;
     border: 1px solid #FF6A6A;;  /*рамка вокруг текса*/
     padding: 15px 40px;    /*падинги рамки от текста*/
+    display: flex;
+    align-items: center;
   }
   
   
@@ -540,6 +530,122 @@
         }
     }
 }     
+
+
+.content_cat {
+  &_main {
+    margin-left: calc(50% - 570px);
+    margin-right: calc(50% - 570px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+  }
+  &_text {
+    color: #F16D7F;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-bottom: 13px;
+    margin-top: 30px;
+  }
+  &__line {
+    width: 63px;
+    height: 3.025px;
+    flex-shrink: 0;
+    padding-bottom: 30px;
+  }
+  &__heading {
+    color: #4D4D4D;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-bottom: 50px;
+  }
+  &__text {
+    color: #5E5E5E;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-bottom: 33px;
+    max-width: 555px;;
+  }
+  &__price {
+    color: #EF5B70;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-bottom: 130px;
+  }
+}
+
+.cat_breadcrumbs {
+  padding-bottom: 49px;
+  &_list {
+    display: flex;
+    gap: 23px;
+  }
+  &_text {
+    color: #6F6E6E;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.list1 {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.list2 {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.list3 {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.button_cat_text {
+  color: #F26376;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #FF6A6A;;  /*рамка вокруг текса*/
+  padding: 15px 40px;    /*падинги рамки от текста*/
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 65px;
+}
+
+.button_cat_text:hover svg path {
+  fill: #FFFFFF;
+}
+
+
+
+
+
+
+
 
 
 

@@ -104,15 +104,7 @@ a {
   z-index: 2;
   position: absolute;
   width: 100%;
-  justify-content: space-around;
-}
-
-.left1 {
-  position: absolute;
-}
-
-.left2 {
-  position: relative;
+  justify-content: space-between;
 }
 
 .promo_img {
@@ -316,6 +308,8 @@ a {
   line-height: normal;
   border: 1px solid #FF6A6A; /*рамка вокруг текса*/
   padding: 15px 40px; /*падинги рамки от текста*/
+  display: flex;
+  align-items: center;
 }
 
 .advantages {
@@ -489,6 +483,114 @@ a {
 }
 .slider__arrow:hover path {
   fill: #F16D7F;
+}
+
+.content_cat_main {
+  margin-left: calc(50% - 570px);
+  margin-right: calc(50% - 570px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e6e6e6;
+}
+.content_cat_text {
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 13px;
+  margin-top: 30px;
+}
+.content_cat__line {
+  width: 63px;
+  height: 3.025px;
+  flex-shrink: 0;
+  padding-bottom: 30px;
+}
+.content_cat__heading {
+  color: #4D4D4D;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 50px;
+}
+.content_cat__text {
+  color: #5E5E5E;
+  text-align: center;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 33px;
+  max-width: 555px;
+}
+.content_cat__price {
+  color: #EF5B70;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 130px;
+}
+
+.cat_breadcrumbs {
+  padding-bottom: 49px;
+}
+.cat_breadcrumbs_list {
+  display: flex;
+  gap: 23px;
+}
+.cat_breadcrumbs_text {
+  color: #6F6E6E;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.list1 {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.list2 {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.list3 {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.button_cat_text {
+  color: #F26376;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #FF6A6A; /*рамка вокруг текса*/
+  padding: 15px 40px; /*падинги рамки от текста*/
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 65px;
+}
+
+.button_cat_text:hover svg path {
+  fill: #FFFFFF;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
