@@ -92,13 +92,14 @@
   position: relative;
   padding: 24px;
   padding-left: 50px;
+  padding-right: 5px;
 }
 
 
 
   .menu_box {
     display: none;    
-    padding: 59px;
+    padding: 20px 60px 60px 20px;
     border: 1px solid #e2e2e2;
     border-radius: 2px;
     background-color: #ffffff;
@@ -136,7 +137,7 @@
     margin-bottom: 5px;
     color: #636363;
     font-family: Lato;
-    font-size: 25px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 300;
     line-height: normal; 
@@ -449,8 +450,9 @@
   }
   
   .footer__block {
-    flex-shrink: 0;
-    background: url(<path-to-image>), lightgray 0px -169px / 100% 246.875% no-repeat;
+      background-image: url('img/subscribe.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -524,7 +526,8 @@
   height: 49px;
   border-radius: 30px 0 0 30px;
   border: none;
-  outline:none
+  outline:none;
+  background-color: #E1E1E1;
 }
 
 input {
@@ -633,9 +636,12 @@ input {
 
 
 .content_cat {
+  margin-left: calc(50% - 570px);
+  margin-right: calc(50% - 570px);
+  position: relative;
+  margin-top: -30px;
+  z-index: 1;
   &_main {
-    margin-left: calc(50% - 570px);
-    margin-right: calc(50% - 570px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -747,7 +753,7 @@ input {
 }
 
 footer {
-  background-image: url(img/subscribe.jpg);
+
 }
 
 
