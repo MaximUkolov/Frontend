@@ -79,22 +79,28 @@ a {
   align-items: center;
   gap: 33px;
   padding: 0 5%;
-  position: relative;
 }
 
-.header__right:hover .menu_box {
-  display: flex;
+.navi {
+  position: relative;
+  padding: 1rem;
+  padding-left: 50px;
 }
 
 .menu_box {
+  display: none;
   padding: 59px;
   border: 1px solid #e2e2e2;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: #ffffff;
   position: absolute;
-  margin-top: -31px;
-  margin-left: -289px;
-  display: none;
+  margin-top: 17px;
+  margin-left: -143px;
+  z-index: 1;
+}
+
+.navi:hover .menu_box {
+  display: flex;
 }
 
 .item_link {
