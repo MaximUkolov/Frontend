@@ -5,7 +5,7 @@
 }
 
 /* Центрируем весь сайт */
-.center {
+center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
 }
@@ -37,6 +37,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
 }
 .header_top_left_text {
   color: #F16D7F;

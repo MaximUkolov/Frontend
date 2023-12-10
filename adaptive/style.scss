@@ -8,10 +8,10 @@
   
   /* Центрируем весь сайт */
   
-  .center {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
-  }
+center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
   
   body {
     font-family: 'Lato', sans-serif;
@@ -39,6 +39,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-left: calc(50% - 570px);
+      padding-right: calc(50% - 570px);
     }
     &_top_left_text {
       color: $colorSiteText;
