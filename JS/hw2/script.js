@@ -65,4 +65,5 @@ let n = prompt(`Введите число`)
 units = n % 10
 tens = Math.floor(n / 10 % 10)
 hundreds = Math.floor(n / 100 % 10)
-console.log(`В числе ${n} количество сотен: ${hundreds}, десятков: ${tens}, единиц: ${units}`)
+thousends = Math.floor(n / 1000 % 10)
+console.log(`В числе ${n} количество тысяч: ${thousends}, количество сотен: ${hundreds}, десятков: ${tens}, единиц: ${units}`)
