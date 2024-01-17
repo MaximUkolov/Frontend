@@ -7,9 +7,20 @@
     
 </head>
 <body>
-    <div class="content">
-        
+    <div class="block">
+	
     </div>
-    <script src="script.js"></script>
+
+
+
+    <script>
+        const divBlock = document.querySelector('.block');
+        const divItem = document.createElement('div');
+        divItem.setAttribute('class', 'item');
+        const textElem = document.createElement('p');
+        textElem.textContent = 'Элемент внутри';
+        divItem.appendChild(divBlock);
+        textElem.appendChild(divItem);
+    </script>
 </body>
 </html>
