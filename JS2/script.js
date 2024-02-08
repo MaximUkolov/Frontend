@@ -262,24 +262,124 @@
 
 
 
-const listEls = document.querySelector('.list');
-const buttonEl10 = document.querySelector('.button10');
-const buttonEl11 = document.querySelector('.button11');
-const buttonEl12 = document.querySelector('.button12');
+// const listEls = document.querySelector('.list');
+// const buttonEl10 = document.querySelector('.button10');
+// const buttonEl11 = document.querySelector('.button11');
+// const buttonEl12 = document.querySelector('.button12');
 
-buttonEl10.addEventListener('click', function (e) {
-    const newLi = document.createElement('li');
-    newLi.textContent ='новый элемент списка';
-    listEls.append(newLi);
-    newLi.classList.add('item');
+// buttonEl10.addEventListener('click', function (e) {
+//     const newLi = document.createElement('li');
+//     newLi.textContent ='новый элемент списка';
+//     listEls.append(newLi);
+//     newLi.classList.add('item');
+// });
+
+// buttonEl11.addEventListener('click', function (e) {
+//     const listEl = document.querySelector('.item');
+//     listEl.remove();
+// })
+
+// buttonEl12.addEventListener('click', function (e) {
+//     buttonEl12.classList.add('click');
+// })
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------ sem4
+
+
+
+
+// В html создать элемент checkbox и текст рядом с ним “Согласен с условиями”
+// Добавить кнопку отправить
+// При клике на кнопку отправить нужно проверять выбран ли активным элемент checkbox
+// Если элемент не выбран, добавить текст под чекбоксом “Необходимо согласиться с условиями”
+
+
+// console.log(agree); // js сам ловит id-шники
+// myForm.addEventListener('submit', function(event) {
+// event.preventDefault();
+// const checkbox = document.getElementById('agree');
+// const errorMessage = document.getElementById('error-message');
+
+// errorMessage.textContent = checkbox.checked ? '' : 'Необходимо согласиться с условиями';
+// // if (!checkbox.checked) {
+// // errorMessage.textContent = 'Необходимо согласиться с условиями';
+// // } else {
+// // errorMessage.textContent = '';
+// // // По идее, здесь должен быть код для отправки формы.
+// // }
+// });
+// document.getElementById('myForm').addEventListener('submit', function(event) {
+// event.preventDefault();
+// const checkbox = document.getElementById('agree');
+// const errorMessage = document.getElementById('error-message');
+
+// if (!checkbox.checked) {
+// errorMessage.textContent = 'Необходимо согласиться с условиями';
+// } else {
+// errorMessage.textContent = '';
+// // По идее, здесь должен быть код для отправки формы.
+// }
+// });
+
+
+
+
+
+
+
+
+
+
+
+// В html создать 2 элемента радио кнопки (input type=”radio”) и текст “Чай”, “Кофе” соответственно
+// Кнопка отправить
+// Если выбран чай, необходимо вывести сообщение “Чай закончился”
+// Если выбран кофе, необходимо вывести сообщение “Кофе закончился”
+
+
+// const form = document.querySelector(".form");
+// const btnTea = document.querySelector("#tea");
+// const btnCoffee = document.querySelector("#coffe");
+// const btnEl = document.querySelector("#submit");
+// const message = document.querySelector(".message");
+// form.addEventListener("submit", (e) => {
+// e.preventDefault();
+//     if (btnTea.checked) {
+//         message.textContent = `Чай закончился`;
+//     }
+//     if (btnCoffee.checked) {
+//         message.textContent = `Кофе закончился`;
+//     }
+// });
+
+
+
+
+
+
+
+
+// Создать поле ввода (пароль)
+// Кнопка отправить
+// Если пользователь вводит текст “пароль” то поле ввода должно быть подсвечено зеленым цветом
+// Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный”
+
+
+
+
+
+
+// Создать поле ввода и под ним заголовок h1 с текстом “Заголовок”
+// При вводе текста в поле ввода необходимо чтобы текст внутри заголовка менятся на введенный в поле ввода
+
+
+const changeInputEl = document.querySelector('.change');
+const titleEl = document.querySelector('.title');
+
+changeInputEl.addEventListener('input', function (e) {
+titleEl.textContent = e.target.value;
 });
-
-buttonEl11.addEventListener('click', function (e) {
-    const listEl = document.querySelector('.item');
-    listEl.remove();
-})
-
-buttonEl12.addEventListener('click', function (e) {
-    buttonEl12.classList.add('click');
-})
-
