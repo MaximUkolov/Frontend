@@ -17,6 +17,11 @@
         border: 1px solid rgb(184, 184, 184);
         padding: 15px;
         border-radius: 10px;
+        box-shadow: 11px 10px 23px rgba(0, 0, 0, 0.205);
+      }
+      .img_content {
+        max-width: 50px;
+        max-height: 50px;
       }
     </style>
   </head>
@@ -43,12 +48,13 @@
 
         const imgEl = document.createElement("img");
         imgEl.classList.add("img_content");
-        imgEl.src = dataElements.symbol;
+        imgEl.src = dataElements.image;
         imgEl.alt = "symbol";
 
         const textEl = document.createElement("p");
         textEl.classList.add("text_content");
-        textEl.textContent = dataElements.rate;
+        textEl.textContent =
+          "Текущий курс:    " + dataElements.rate + "   рублей";
 
         contentEl.appendChild(productEl);
         productEl.appendChild(titleEl);
