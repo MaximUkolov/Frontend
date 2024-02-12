@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="data.js"></script>
-    <script src="script.js"></script> -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 
     <!-- <style>
       .content {
@@ -63,9 +63,6 @@
   </div> -->
 
     <div class="content"></div>
-    
-    
-
 
     <script>
       const data = JSON.parse(dataInfo); /*Парсим объект(массив) в строку*/
@@ -78,9 +75,8 @@
       const contentEl = document.querySelector(".content");
 
       data.forEach((dataElements) => {
-
-        const productEl = document.createElement('div')
-        productEl.classList.add('product')
+        const productEl = document.createElement("div");
+        productEl.classList.add("product");
 
         const titleEl = document.createElement("h1");
         titleEl.classList.add("title_content");
@@ -89,21 +85,17 @@
         const imgEl = document.createElement("img");
         imgEl.classList.add("img_content");
         imgEl.src = dataElements.symbol;
-        imgEl.alt = 'symbol';
+        imgEl.alt = "symbol";
 
         const textEl = document.createElement("p");
         textEl.classList.add("text_content");
         textEl.textContent = dataElements.rate;
 
-
         contentEl.appendChild(productEl);
         productEl.appendChild(titleEl);
         productEl.appendChild(imgEl);
         productEl.appendChild(textEl);
-
       });
     </script>
-
-    
   </body>
 </html>
