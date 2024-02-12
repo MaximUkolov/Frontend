@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="data.js"></script>
+    <script src="script.js"></script> -->
 
-
-
-<!-- /*В html создать элемент checkbox и текст рядом с ним “Согласен с условиями”
+    <!-- <style>
+      .content {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      .product {
+        width: 300px;
+        border: 2px solid black;
+        padding: 15px;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- /*В html создать элемент checkbox и текст рядом с ним “Согласен с условиями”
 Добавить кнопку отправить
 При клике на кнопку отправить нужно проверять выбран ли активным элемент checkbox
 Если элемент не выбран, добавить текст под чекбоксом “Необходимо согласиться с условиями”*/ -->
-  <!-- <form id="myForm">
+    <!-- <form id="myForm">
     <input type="checkbox" id="agree" name="agree">
     <label for="agree">Согласен с условиями</label><br>
     <span id="error-message" class="error-message"></span><br>
     <button type="submit">Отправить</button>
   </form>
      -->
-    
-    
-
-
-
 
     <!-- В html создать 2 элемента радио кнопки (input type=”radio”) и текст “Чай”, “Кофе” соответственно
 Кнопка отправить
 Если выбран чай, необходимо вывести сообщение “Чай закончился”
 Если выбран кофе, необходимо вывести сообщение “Кофе закончился” -->
-  
-      <!-- <form action="#" class="form">
+
+    <!-- <form action="#" class="form">
         <input type="radio" name="drink" id="tea">
         <label for="tea">Чай</label>
         <input type="radio" name="drink" id="coffe">
@@ -40,26 +49,61 @@
         <button type="submit" id="submit">Выбрать</button>
       </form> -->
 
-
-
-
-      <!-- Создать поле ввода (пароль)
+    <!-- Создать поле ввода (пароль)
 Кнопка отправить
 Если пользователь вводит текст “пароль” то поле ввода должно быть подсвечено зеленым цветом
 Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный” -->
 
-
-
-<!-- // Создать поле ввода и под ним заголовок h1 с текстом “Заголовок”
+    <!-- // Создать поле ввода и под ним заголовок h1 с текстом “Заголовок”
 // При вводе текста в поле ввода необходимо чтобы текст внутри заголовка менятся на введенный в поле ввода -->
 
-
-  <div class="change-title">
+    <!-- <div class="change-title">
     <input type="text" class="change" placeholder="Enter a new title">
     <h1 class="title">Заголовок</h1>
-  </div>
+  </div> -->
 
-  <script src="script.js"></script>
+    <div class="content"></div>
+    
+    
 
-</body>
+
+    <script>
+      const data = JSON.parse(dataInfo); /*Парсим объект(массив) в строку*/
+      console.log(data);
+
+      data.forEach(function (item) {
+        console.log(item.code); /*Выводим значение code в консоль*/
+      });
+
+      const contentEl = document.querySelector(".content");
+
+      data.forEach((dataElements) => {
+
+        const productEl = document.createElement('div')
+        productEl.classList.add('product')
+
+        const titleEl = document.createElement("h1");
+        titleEl.classList.add("title_content");
+        titleEl.textContent = dataElements.description;
+
+        const imgEl = document.createElement("img");
+        imgEl.classList.add("img_content");
+        imgEl.src = dataElements.symbol;
+        imgEl.alt = 'symbol';
+
+        const textEl = document.createElement("p");
+        textEl.classList.add("text_content");
+        textEl.textContent = dataElements.rate;
+
+
+        contentEl.appendChild(productEl);
+        productEl.appendChild(titleEl);
+        productEl.appendChild(imgEl);
+        productEl.appendChild(textEl);
+
+      });
+    </script>
+
+    
+  </body>
 </html>

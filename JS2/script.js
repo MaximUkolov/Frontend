@@ -103,14 +103,13 @@
 
 //task4
 
-  /* <form action="#">
+/* <form action="#">
   <input type="text">
   <button class="btn">Отправить</button>
 </form>
 Дано поле ввода и кнопка отправить, необходим реализовать функционал, если пользователь нажимает на кнопку отправить, 
 а поле ввода пустое, то под полем ввода и кнопкой должен появиться заголовок h2 с текстом вы не заполнили поле ввода
 У поля ввода должна появиться рамка красного цвета */
-
 
 // const formEl = document.querySelector('.form');
 // const btnEl = document.querySelector('.btn');
@@ -128,15 +127,10 @@
 //   }
 // };
 
-
-
-
-
 // В html создать кнопку button
 // После загрузки страницы вывести в консоль текст “страница загрузилась”
 // Добавить событие onclick которое выводит в консоль текст “событие onclick”
 // Добавить событие addEventListener которое выводит в консоль текст “событие addEventListener”
-
 
 // const btn = document.querySelector('.btn')
 // console.log("страница загрузилась");
@@ -145,13 +139,11 @@
 //   console.log("событие onclick");
 // }
 
-// btn.addEventListener("click", 
-// function() { 
-//   console.log("событие addEventListener"); 
+// btn.addEventListener("click",
+// function() {
+//   console.log("событие addEventListener");
 // }
 // )
-
-
 
 // Создать в html три кнопки button с нумерацией (1, 2, 3 соответственно)
 // Добавить клик на кнопку , чтобы в консоль выводилась именно та кнопка на которую мы нажали
@@ -164,52 +156,42 @@
 // const btn4 = document.querySelector('.btn4')
 // const btn5 = document.querySelector('.btn5')
 
-// btn1.addEventListener("click", 
-// function() { 
-//   console.log("Кнопка 1"); 
+// btn1.addEventListener("click",
+// function() {
+//   console.log("Кнопка 1");
 // }
 // )
 
-// btn2.addEventListener("click", 
-// function() { 
-//   console.log("Кнопка 2"); 
+// btn2.addEventListener("click",
+// function() {
+//   console.log("Кнопка 2");
 // }
 // )
 
-// btn3.addEventListener("click", 
-// function() { 
-//   console.log("Кнопка 3"); 
+// btn3.addEventListener("click",
+// function() {
+//   console.log("Кнопка 3");
 // }
 // )
 
 // let a = 0
-// btn4.addEventListener("click", 
-// function() { 
+// btn4.addEventListener("click",
+// function() {
 //   a++
-//   console.log(a); 
+//   console.log(a);
 // }
 // )
 
-// btn5.addEventListener("click", 
-// function() { 
+// btn5.addEventListener("click",
+// function() {
 //   btn5.textContent = "Вы нажали на эту кнопку"
 //   console.log("Кнопка 5")
 // }
 // )
 
-
-
-
-
-
-
-
-
-
 // Создать кнопку, которая добавляет заголовок h1 с текстом, “Новый заголовок, данный элемент нужно расположить после кнопки
 // Создать вторую кнопку, которая будет удалять созданный заголовок h1
 // Создать третью кнопку, при наведении на которую в консоль будет выводиться текст “вы навели на данную кнопку” , как только вы убираем курсор мыши с кнопки, в консоли должен появиться текст “Наведения на кнопку больше нет”
-
 
 // // Task 3
 //         // 1. Создать кнопку, которая добавляет заголовок h1 с текстом, “Новый заголовок, данный элемент нужно расположить после кнопки
@@ -248,19 +230,10 @@
 //             console.log('Наведения на кнопку больше нет');
 //         });
 
-
-
-
-
-
-
-
 // Создать в html список состоящий из 3-х произвольных элементов li
 // Нужно создать кнопку которая будет добавлять элементы списка с текстом “новый элемент списка”
 // Создать кнопку, которая будет удалять первый элемент из созданного списка
 // Создать кнопку, при клике на которую ей добавляется класс “click”
-
-
 
 // const listEls = document.querySelector('.list');
 // const buttonEl10 = document.querySelector('.button10');
@@ -283,63 +256,44 @@
 //     buttonEl12.classList.add('click');
 // })
 
-
-
-
-
 // ------------------------------------------------------------------------------------------------------------------ sem4
-
-
-
 
 // В html создать элемент checkbox и текст рядом с ним “Согласен с условиями”
 // Добавить кнопку отправить
 // При клике на кнопку отправить нужно проверять выбран ли активным элемент checkbox
 // Если элемент не выбран, добавить текст под чекбоксом “Необходимо согласиться с условиями”
 
+// console.log(agree); // js сам ловит id-шники
+// myForm.addEventListener('submit', function(event) {
+// event.preventDefault();
+// const checkbox = document.getElementById('agree');
+// const errorMessage = document.getElementById('error-message');
 
-console.log(agree); // js сам ловит id-шники
-myForm.addEventListener('submit', function(event) {
-event.preventDefault();
-const checkbox = document.getElementById('agree');
-const errorMessage = document.getElementById('error-message');
+// errorMessage.textContent = checkbox.checked ? '' : 'Необходимо согласиться с условиями';
+// // if (!checkbox.checked) {
+// // errorMessage.textContent = 'Необходимо согласиться с условиями';
+// // } else {
+// // errorMessage.textContent = '';
+// // // По идее, здесь должен быть код для отправки формы.
+// // }
+// });
+// document.getElementById('myForm').addEventListener('submit', function(event) {
+// event.preventDefault();
+// const checkbox = document.getElementById('agree');
+// const errorMessage = document.getElementById('error-message');
 
-errorMessage.textContent = checkbox.checked ? '' : 'Необходимо согласиться с условиями';
 // if (!checkbox.checked) {
 // errorMessage.textContent = 'Необходимо согласиться с условиями';
 // } else {
 // errorMessage.textContent = '';
 // // По идее, здесь должен быть код для отправки формы.
 // }
-});
-document.getElementById('myForm').addEventListener('submit', function(event) {
-event.preventDefault();
-const checkbox = document.getElementById('agree');
-const errorMessage = document.getElementById('error-message');
-
-if (!checkbox.checked) {
-errorMessage.textContent = 'Необходимо согласиться с условиями';
-} else {
-errorMessage.textContent = '';
-// По идее, здесь должен быть код для отправки формы.
-}
-});
-
-
-
-
-
-
-
-
-
-
+// });
 
 // В html создать 2 элемента радио кнопки (input type=”radio”) и текст “Чай”, “Кофе” соответственно
 // Кнопка отправить
 // Если выбран чай, необходимо вывести сообщение “Чай закончился”
 // Если выбран кофе, необходимо вывести сообщение “Кофе закончился”
-
 
 // const form = document.querySelector(".form");
 // const btnTea = document.querySelector("#tea");
@@ -356,30 +310,22 @@ errorMessage.textContent = '';
 //     }
 // });
 
-
-
-
-
-
-
-
 // Создать поле ввода (пароль)
 // Кнопка отправить
 // Если пользователь вводит текст “пароль” то поле ввода должно быть подсвечено зеленым цветом
 // Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный”
 
-
-
-
-
-
 // Создать поле ввода и под ним заголовок h1 с текстом “Заголовок”
 // При вводе текста в поле ввода необходимо чтобы текст внутри заголовка менятся на введенный в поле ввода
 
+// const changeInputEl = document.querySelector('.change');
+// const titleEl = document.querySelector('.title');
 
-const changeInputEl = document.querySelector('.change');
-const titleEl = document.querySelector('.title');
+// changeInputEl.addEventListener('input', function (e) {
+// titleEl.textContent = e.target.value;
+// });
 
-changeInputEl.addEventListener('input', function (e) {
-titleEl.textContent = e.target.value;
-});
+// -------------------------------------------------------------------sem5
+
+/*ссылка https://api.coindesk.com/v1/bpi/currentprice.json*/
+
