@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="data.js"></script>
+  </head>
+  <body>
+    <!-- <div class="product">
+      <div class="product_box">
+        <div class="box_left">
+          <img src="prod_1.jpg" alt="img1" class="img" />
+        </div>
+
+        <div class="box_right">
+          <a href="#" class="brand"
+            >MANGO PEOPLE <span class="name">T-SHIRT</span></a
+          >
+          <div class="box_info">
+            <div class="price">
+              <p>Price:</p>
+              <p class="price_text">
+                <span class="currency">$</span
+                ><span class="price_value_num">300</span>
+              </p>
+            </div>
+            <p class="color">Color: <span class="color_value">Red</span></p>
+            <p>
+              Size:
+              <select id="size" class="size">
+                <option value="#"></option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </p>
+            <div class="quantity">
+              <p>Quantity:</p>
+              <input type="number" class="quantity_value" min="0" />
+              <button type="submit" class="button">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product_box">
+        <div class="box_left">
+          <img src="prod_2.jpg" alt="img1" class="img" />
+        </div>
+        <div class="box_right">
+          <a href="#" class="brand"
+            >Ellery X M'O <span class="name">capsule</span></a
+          >
+          <div class="box_info">
+            <div class="price">
+              <p>Price:</p>
+              <p class="price_text">
+                <span class="currency">$</span
+                ><span class="price_value_num">300</span>
+              </p>
+            </div>
+            <p class="color">Color: <span class="color_value">Red</span></p>
+            <p>
+              Size:
+              <select id="size" class="size">
+                <option value="#"></option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </p>
+            <div class="quantity">
+              <p>Quantity:</p>
+              <input type="number" class="quantity_value" min="0" />
+              <button type="submit" class="button">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="cart"></div>
+
+    <script>
+      const data = JSON.parse(dataProducts);
+      console.log(data);
+
+      const cartEl = document.querySelector(".cart");
+
+      data.forEach((product) => {
+        const productEl = document.createElement("div");
+        productEl.classList.add("product");
+
+        const product_boxEl = document.createElement("div");
+        product_boxEl.classList.add("product_box");
+
+        const box_leftEl = document.createElement("div");
+        box_leftEl.classList.add("box_left");
+
+        const imgEl = document.createElement("img");
+        imgEl.classList.add("img");
+        imgEl.src = product.image;
+        imgEl.alt = "Photo";
+
+        const box_rightEl = document.createElement("div");
+        box_rightEl.classList.add("box_right");
+
+        const titleEl = document.createElement("a");
+        titleEl.classList.add("brand");
+        titleEl.href = "#";
+        titleEl.textContent = product.brand.toUpperCase() + product.name.toUpperCase();
+
+        const box_infoEl = document.createElement("div");
+        box_infoEl.classList.add("box_info");
+
+        const priceEl = document.createElement("div");
+        priceEl.classList.add("price");
+
+        const textEl = document.createElement("p");
+        textEl.textContent = "Price:";
+
+        const priceValueEl = document.createElement("p");
+        priceValueEl.classList.add("price_text");
+        priceValueEl.textContent = product.currency + "\n";
+
+        const price_value_numEl = document.createElement("span");
+        price_value_numEl.classList.add("price_value_num");
+        price_value_numEl.textContent = product.price_value + "\n";
+
+        const colorEl = document.createElement("p");
+        colorEl.textContent = "Color: " + product.color;
+
+
+
+        
+        cartEl.appendChild(productEl);
+
+        productEl.appendChild(product_boxEl);
+
+        product_boxEl.appendChild(box_leftEl);
+        product_boxEl.appendChild(box_rightEl);
+
+        box_leftEl.appendChild(imgEl);
+
+        box_rightEl.appendChild(titleEl);
+        box_rightEl.appendChild(box_infoEl);
+
+        box_infoEl.appendChild(priceEl);
+        box_infoEl.appendChild(colorEl);
+
+        priceEl.appendChild(textEl);
+        priceEl.appendChild(priceValueEl);
+
+        priceValueEl.append(price_value_numEl);
+      });
+    </script>
+  </body>
+</html>

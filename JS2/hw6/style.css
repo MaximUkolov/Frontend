@@ -83,11 +83,15 @@ a {
     border: 1px solid #F5C4AB;
 }
 
-.price_value {
+.price_value_num {
     color: rgb(239, 91, 112);
 }
 
 .price {
     display: flex;
     gap: 7px;
+}
+
+.currency {
+    color: black;
 }
