@@ -110,7 +110,8 @@
         const titleEl = document.createElement("a");
         titleEl.classList.add("brand");
         titleEl.href = "#";
-        titleEl.textContent = product.brand.toUpperCase() + product.name.toUpperCase();
+        titleEl.textContent =
+          product.brand.toUpperCase() + product.name.toUpperCase();
 
         const box_infoEl = document.createElement("div");
         box_infoEl.classList.add("box_info");
@@ -132,9 +133,15 @@
         const colorEl = document.createElement("p");
         colorEl.textContent = "Color: " + product.color;
 
+        const sizeEl = document.createElement("p");
+        sizeEl.textContent = "Size: " + product.size;
 
+        const quantityEl = document.createElement("div");
+        quantityEl.classList.add("quantity");
 
-        
+        const quantityTextEl = document.createElement("p");
+        quantityTextEl.textContent = "Quantity: " + product.quantity_value;
+
         cartEl.appendChild(productEl);
 
         productEl.appendChild(product_boxEl);
@@ -149,11 +156,15 @@
 
         box_infoEl.appendChild(priceEl);
         box_infoEl.appendChild(colorEl);
+        box_infoEl.appendChild(sizeEl);
+        box_infoEl.appendChild(quantityEl);
 
         priceEl.appendChild(textEl);
         priceEl.appendChild(priceValueEl);
 
         priceValueEl.append(price_value_numEl);
+
+        quantityEl.appendChild(quantityTextEl);
       });
     </script>
   </body>
