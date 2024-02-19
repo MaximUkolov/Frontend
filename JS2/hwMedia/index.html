@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>Текущее время: <span class="currentTime">0</span></div>
+
+    <div class="player">
+      <video
+        src="https://www.shutterstock.com/shutterstock/videos/1079014058/preview/stock-footage-happy-big-asian-family-on-outdoor-beach-travel-holiday-vacation-multi-generation-family-enjoy-and.webm"
+        width="1000px"
+        height="500px"
+        preload="auto"
+      ></video>
+      <input type="range" class="timing" value="0" step="0.001" />
+    </div>
+
+    <i class="play"
+      ><img src="media/Play.png" alt="play" width="20px" height="20px"
+    /></i>
+    <i class="pause"
+      ><img src="media/Pause.png" alt="pause" width="20px" height="20px"
+    /></i>
+    <input type="range" class="volume" min="0" max="100" step="1" />
+
+    <script>
+      const videoEl = document.querySelector("video");
+      const playEl = document.querySelector(".play");
+      const pauseEl = document.querySelector(".pause");
+      const volumeEl = document.querySelector(".volume");
+      const timingEl = document.querySelector(".timing");
+      const currentTimeEl = document.querySelector(".currentTime");
+
+      playEl.addEventListener("click", function (e) {
+        videoEl.play();
+      });
+
+      pauseEl.addEventListener("click", function (e) {
+        videoEl.pause();
+      });
+
+      volumeEl.addEventListener("input", function (e) {
+        videoEl.volume = volumeEl.value;
+      });
+
+      videoEl.addEventListener("timeupdate", function (e) {
+        currentTimeEl.innerText = Math.round(videoEl.currentTime * 100) / 100;
+        timingEl.value = (videoEl.currentTime / videoEl.duration) * 100;
+      });
+
+      timingEl.addEventListener("input", function (e) {
+        videoEl.currentTime = (timingEl.value / 100) * videoEl.duration;
+      });
+    </script>
+  </body>
+</html>

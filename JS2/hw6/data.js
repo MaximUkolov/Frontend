@@ -23,4 +23,4 @@ const dataProducts = `
         "image": "prod_2.jpg"
     }
 ]
-`
+`;
