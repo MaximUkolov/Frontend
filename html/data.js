@@ -10,4 +10,5 @@ const dataProducts = `
         "size": "L",
         "quantity_value": 2,
         "image": "prod_1.jpg"
-    }]`
+    }
+]`

@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="data.js"></script>
   </head>
 
   <body>
@@ -107,6 +108,7 @@
                 Operandi.
               </p>
               <p class="product_price">$52.00</p>
+              <button class="product_add_button">
               <a href="#" class="product__add"
                 ><svg
                   width="27"
@@ -130,6 +132,7 @@
                 </svg>
                 Add to Cart</a
               >
+                </button>
             </div>
           </div>
           <div class="product">
@@ -146,6 +149,7 @@
                 Operandi.
               </p>
               <p class="product_price">$52.00</p>
+              <button class="product_add_button">
               <a href="#" class="product__add"
                 ><svg
                   width="27"
@@ -169,6 +173,7 @@
                 </svg>
                 Add to Cart</a
               >
+              </button>
             </div>
           </div>
           <div class="product">
@@ -185,6 +190,7 @@
                 Operandi.
               </p>
               <p class="product_price">$52.00</p>
+              <button class="product_add_button">
               <a href="#" class="product__add"
                 ><svg
                   width="27"
@@ -208,6 +214,7 @@
                 </svg>
                 Add to Cart</a
               >
+              </button>
             </div>
           </div>
           <div class="product">
@@ -224,6 +231,7 @@
                 Operandi.
               </p>
               <p class="product_price">$52.00</p>
+              <button class="product_add_button">
               <a href="#" class="product__add"
                 ><svg
                   width="27"
@@ -247,6 +255,7 @@
                 </svg>
                 Add to Cart</a
               >
+              </button>
             </div>
           </div>
           <div class="product">
@@ -263,6 +272,7 @@
                 Operandi.
               </p>
               <p class="product_price">$52.00</p>
+              <button class="product_add_button">
               <a href="#" class="product__add"
                 ><svg
                   width="27"
@@ -286,6 +296,7 @@
                 </svg>
                 Add to Cart</a
               >
+              </button>
             </div>
           </div>
           <div class="product">
@@ -302,6 +313,7 @@
                 Operandi.
               </p>
               <p class="product_price">$52.00</p>
+              <button class="product_add_button">
               <a href="#" class="product__add"
                 ><svg
                   width="27"
@@ -325,6 +337,7 @@
                 </svg>
                 Add to Cart</a
               >
+              </button>
             </div>
           </div>
         </div>
@@ -408,12 +421,13 @@
   
 
         const cartEl = document.querySelector(".cart_js");
-        const clickEl = document.querySelector(".product__add")
+        const clickEl = document.querySelector(".product_add_button")
 
         clickEl.addEventListener("click", function(e) {
-            data.forEach((product) => {
+
+                data.forEach((product) => {
                 const productEl = document.createElement("div");
-                productEl.classList.add("product_cart");
+                productEl.classList.add("product_cart_add");
         
                 const product_boxEl = document.createElement("div");
                 product_boxEl.classList.add("product_box_cart");
@@ -487,10 +501,8 @@
                 priceValueEl.append(price_value_numEl);
         
                 quantityEl.appendChild(quantityTextEl);
-              });
-        })
-
-        
+              });      
+            })
     </script>
   </body>
 </html>

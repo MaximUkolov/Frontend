@@ -901,7 +901,7 @@ input {
 // ______________________ for JS
 
 
-.product_cart {
+.product_cart_add {
   margin-top: 100px;
   display: flex;
   gap: 70px;
@@ -916,6 +916,7 @@ input {
   gap: 40px;
   box-shadow: 11px 10px 23px rgba(0, 0, 0, 0.205);
   border-radius: 10px;
+  height: 210px;
 }
 
 .img_cart {
@@ -926,6 +927,12 @@ input {
 }
 
 .box_right_cart {
+  padding-left: 31px;
+  padding-top: 22px;
+  width: 100%;
+}
+
+.box_left_cart {
   padding-left: 31px;
   padding-top: 22px;
   width: 100%;
