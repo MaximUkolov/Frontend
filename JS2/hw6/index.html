@@ -8,126 +8,126 @@
     <script src="data.js"></script>
   </head>
   <body>
-    <!-- <div class="product">
-      <div class="product_box">
-        <div class="box_left">
-          <img src="prod_1.jpg" alt="img1" class="img" />
+    <div class="product_cart">
+      <div class="product_box_cart">
+        <div class="box_left_cart">
+          <img src="prod_1.jpg" alt="img1" class="img_cart" />
         </div>
 
-        <div class="box_right">
-          <a href="#" class="brand"
-            >MANGO PEOPLE <span class="name">T-SHIRT</span></a
+        <div class="box_right_cart">
+          <a href="#" class="brand_cart"
+            >MANGO PEOPLE <span class="name_cart">T-SHIRT</span></a
           >
-          <div class="box_info">
-            <div class="price">
+          <div class="box_info_cart">
+            <div class="price_cart">
               <p>Price:</p>
-              <p class="price_text">
-                <span class="currency">$</span
-                ><span class="price_value_num">300</span>
+              <p class="price_text_cart">
+                <span class="currency_cart">$</span
+                ><span class="price_value_num_cart">300</span>
               </p>
             </div>
-            <p class="color">Color: <span class="color_value">Red</span></p>
+            <p class="color_cart">Color: <span class="color_value_cart">Red</span></p>
             <p>
               Size:
-              <select id="size" class="size">
+              <select id="size" class="size_cart">
                 <option value="#"></option>
                 <option value="M">M</option>
                 <option value="L">L</option>
                 <option value="XL">XL</option>
               </select>
             </p>
-            <div class="quantity">
+            <div class="quantity_cart">
               <p>Quantity:</p>
-              <input type="number" class="quantity_value" min="0" />
-              <button type="submit" class="button">Ok</button>
+              <input type="number" class="quantity_value_cart" min="0" />
+              <button type="submit" class="button_cart">Ok</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="product_box">
-        <div class="box_left">
-          <img src="prod_2.jpg" alt="img1" class="img" />
+      <div class="product_box_cart">
+        <div class="box_left_cart">
+          <img src="prod_2.jpg" alt="img1" class="img_cart" />
         </div>
-        <div class="box_right">
-          <a href="#" class="brand"
-            >Ellery X M'O <span class="name">capsule</span></a
+        <div class="box_right_cart">
+          <a href="#" class="brand_cart"
+            >Ellery X M'O <span class="name_cart">capsule</span></a
           >
-          <div class="box_info">
-            <div class="price">
+          <div class="box_info_cart">
+            <div class="price_cart">
               <p>Price:</p>
-              <p class="price_text">
-                <span class="currency">$</span
-                ><span class="price_value_num">300</span>
+              <p class="price_text_cart">
+                <span class="currency_cart">$</span
+                ><span class="price_value_num_cart">300</span>
               </p>
             </div>
-            <p class="color">Color: <span class="color_value">Red</span></p>
+            <p class="color_cart">Color: <span class="color_value_cart">Red</span></p>
             <p>
               Size:
-              <select id="size" class="size">
+              <select id="size" class="size_cart">
                 <option value="#"></option>
                 <option value="M">M</option>
                 <option value="L">L</option>
                 <option value="XL">XL</option>
               </select>
             </p>
-            <div class="quantity">
+            <div class="quantity_cart">
               <p>Quantity:</p>
-              <input type="number" class="quantity_value" min="0" />
-              <button type="submit" class="button">Ok</button>
+              <input type="number" class="quantity_value_cart" min="0" />
+              <button type="submit" class="button_cart">Ok</button>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <div class="cart"></div>
+    <!-- <div class="cart_js"></div>
 
     <script>
       const data = JSON.parse(dataProducts);
       console.log(data);
 
-      const cartEl = document.querySelector(".cart");
+      const cartEl = document.querySelector(".cart_js");
 
       data.forEach((product) => {
         const productEl = document.createElement("div");
-        productEl.classList.add("product");
+        productEl.classList.add("product_cart");
 
         const product_boxEl = document.createElement("div");
-        product_boxEl.classList.add("product_box");
+        product_boxEl.classList.add("product_box_cart");
 
         const box_leftEl = document.createElement("div");
-        box_leftEl.classList.add("box_left");
+        box_leftEl.classList.add("box_left_cart");
 
-        const imgEl = document.createElement("img");
-        imgEl.classList.add("img");
+        const imgEl = document.createElement("img_cart");
+        imgEl.classList.add("img_cart");
         imgEl.src = product.image;
         imgEl.alt = "Photo";
 
         const box_rightEl = document.createElement("div");
-        box_rightEl.classList.add("box_right");
+        box_rightEl.classList.add("box_right_cart");
 
         const titleEl = document.createElement("a");
-        titleEl.classList.add("brand");
+        titleEl.classList.add("brand_cart");
         titleEl.href = "#";
         titleEl.textContent =
           product.brand.toUpperCase() + product.name.toUpperCase();
 
         const box_infoEl = document.createElement("div");
-        box_infoEl.classList.add("box_info");
+        box_infoEl.classList.add("box_info_cart");
 
         const priceEl = document.createElement("div");
-        priceEl.classList.add("price");
+        priceEl.classList.add("price_cart");
 
         const textEl = document.createElement("p");
         textEl.textContent = "Price:";
 
         const priceValueEl = document.createElement("p");
-        priceValueEl.classList.add("price_text");
+        priceValueEl.classList.add("price_text_cart");
         priceValueEl.textContent = product.currency + "\n";
 
         const price_value_numEl = document.createElement("span");
-        price_value_numEl.classList.add("price_value_num");
+        price_value_numEl.classList.add("price_value_num_cart");
         price_value_numEl.textContent = product.price_value + "\n";
 
         const colorEl = document.createElement("p");
@@ -137,7 +137,7 @@
         sizeEl.textContent = "Size: " + product.size;
 
         const quantityEl = document.createElement("div");
-        quantityEl.classList.add("quantity");
+        quantityEl.classList.add("quantity_cart");
 
         const quantityTextEl = document.createElement("p");
         quantityTextEl.textContent = "Quantity: " + product.quantity_value;
@@ -166,6 +166,6 @@
 
         quantityEl.appendChild(quantityTextEl);
       });
-    </script>
+    </script> -->
   </body>
 </html>
