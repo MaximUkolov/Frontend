@@ -6,9 +6,6 @@
 // }
 // console.log(mergeArrays(arr1, arr2));
 
-
-
-
 // const arr3 = [1, 2, 3, 2, 4, 1, 5];
 // const mergeArrays = [...arr3];
 
@@ -19,11 +16,7 @@
 // });
 // console.log(arr4);
 
-
-
 // ________________________________________________________
-
-
 
 // const arr = [1, 2, 3, 2, 4, 1, 5];
 
@@ -54,10 +47,7 @@
 // console.log(calculateAverage(numbers)); // Выведет: 3.5
 // console.log(capitalizeFirstLetter('hello qwerty')); // Выведет: Hello Qwerty
 
-
-
 // ________________________________________________________
-
 
 // function createCalculator(initialValue) {
 //     let value = initialValue;
@@ -87,10 +77,7 @@
 //     calculator.subtract(3);
 // });
 
-
-
-// _______________________________________________________
-
+// _________________________________________________________
 
 // function createPasswordChecker(length) {
 //     return function(password) {
@@ -101,3 +88,81 @@
 // const isPasswordValid = createPasswordChecker(8);
 // console.log(isPasswordValid('password')); // Ожидаемый результат: false
 // console.log(isPasswordValid('secret')); // Ожидаемый результат: true
+
+// Семинар 2______________________________________________
+
+// const person = {
+//   name: "John",
+//   age: 25,
+//   gender: "male",
+
+//   introduce() {
+//     console.log(
+//       `My name is ${this.name}. I'm ${this.age} years old and I identify as ${this.gender}.`
+//     );
+//   },
+
+//   changeName(newName) {
+//     this.name = newName;
+//     console.log(this.name);
+//   },
+// };
+
+// person.introduce();
+// person.changeName("Mike");
+
+// ________________________________________________________________
+
+// const Animal = {
+//     dogName: "Bobik",
+//     eat() {
+//     console.log(`${this.dogName} ест`);
+//     }
+//     }
+
+//     Animal.eat();
+
+//     const Dog = {
+//     dogName: "Sharik",
+//     bark() {
+//     console.log(`${this.dogName} лает`);
+//     },
+
+//     }
+
+//     Dog.eat = Animal.eat;
+//     Dog.eat();
+
+// ________________________________________________________________
+
+// const calculator = {
+//     add: function(a, b) {
+//     return a + b;
+//     },
+//     subtract: function(a, b) {
+//     return a - b;
+//     },
+//     multiply: function(a, b) {
+//     return a * b;
+//     }
+//     };
+
+//     console.log(calculator.add.call(null, 5, 3));
+//     console.log(calculator.subtract.apply(null, [5, 3]));
+
+// ________________________________________________________________
+
+// class Persons {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   introduce = () => {
+//     console.log(`My name is ${this.name}. Mнe ${this.age}`);
+//   };
+// }
+
+// const person = new Persons("John", 25);
+// console.log(person);
+// person.introduce();
