@@ -8,15 +8,15 @@
 // Метод displayInfo() - выводит информацию о книге (название, автор и количество страниц).
 
 
-// const Book = {
-//     title: 'BlaBlaBla',
-//     author: 'UkolovMS',
-//     pages: 10,
-//     displayInfo() {
-//         console.log(this.title, this.author, this.pages);
-//     }
-// }
-// Book.displayInfo();
+const Book = {
+    title: 'BlaBlaBla',
+    author: 'UkolovMS',
+    pages: 10,
+    displayInfo() {
+        console.log(this.title, this.author, this.pages);
+    }
+}
+Book.displayInfo();
 
 
 // Задание 2: ""Управление списком студентов""
@@ -36,5 +36,4 @@ const Student = {
         console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
     }
 }
-
 Student.displayInfo();
