@@ -6,11 +6,14 @@
 
 
 const http = require("http");
+let viewsCounter = 0;
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
+    viewsCounter++;
     res.writeHead(200, { "Content-Type": "text/html; charset=UTF-8" });
     res.end("<h1>/</h1>");
   } else if (req.url === "/about") {
+    viewsCounter++;
     res.writeHead(200, { "Content-Type": "text/html; charset=UTF-8" });
     res.write("<h1>/about</h1>");
     res.write('<a href="http://127.0.0.1:5000">На главную</a>');
