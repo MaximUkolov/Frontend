@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hw1.js",
+  "scripts": {
+    "start": "node ./task2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "number-precision": "^1.6.0"
+  }
+}
