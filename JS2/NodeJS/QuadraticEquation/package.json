@@ -1,5 +1,5 @@
 {
-  "name": "hw2",
+  "name": "quadraticEquation",
   "version": "1.0.0",
   "description": "`npm install quadratic-equation-solver`",
   "main": "quadraticEquation.js",
