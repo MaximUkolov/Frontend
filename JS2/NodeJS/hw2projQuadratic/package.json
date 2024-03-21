@@ -1,0 +1,12 @@
+{
+  "name": "hw2projquadratic",
+  "version": "1.0.0",
+  "description": "`npm install quadratic-equation-solver`",
+  "main": "quadraticEquation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
