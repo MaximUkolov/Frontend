@@ -83,7 +83,7 @@ function renderProducts() {
     const addReviewForm = document.createElement("form");
     addReviewForm.innerHTML = `
       <input type="text" id="reviewInput${product.id}" placeholder="Добавить отзыв">
-      <button class="btnAdd" onclick="addReview('${product.id}')" disabled>Добавить</button>
+      <button class="btnAdd" onclick="addReview('${product.id}')">Добавить</button>
     `;
 
     productDiv.appendChild(reviewsList);
@@ -95,11 +95,21 @@ function renderProducts() {
 function addReview(productId) {
   const reviewInput = document.getElementById(`reviewInput${productId}`);
   const reviewText = reviewInput.value;
+  const btnEl = document.querySelector(".btnAdd");
+  const inputEl = document.querySelector("input");
 
-  if (reviewText.length < 5 || reviewText.length > 500) {
+  if (inputEl.value.length < 5 || inputEl.value.length > 500) {
     alert("Отзыв должен быть от 5 до 500 символов");
+    btnEl.disabled = true;
+    inputEl.value = "";
+    btnEl.disabled = false;
     return;
   }
+
+  // if (reviewText.length < 5 || reviewText.length > 500) {
+  //   alert("Отзыв должен быть от 5 до 500 символов");
+  //   return;
+  // }
 
   const product = initialData.find((product) => product.id === productId);
   const newReview = { id: uid(), text: reviewText };
