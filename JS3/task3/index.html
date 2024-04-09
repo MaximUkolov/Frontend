@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+  </head>
+  <body>
+    <button id="loadNewsButton">Загрузить новости</button>
+    <div id="newsContainer"></div>
+
+    <script>
+      function fetchNews() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (Math.random() < 0.1) {
+              reject(new Error("Failed to fetch news data."));
+            } else {
+              resolve("News data fetched successfully.");
+            }
+          }, 2000);
+        });
+      }
+
+      const loadNewsButton = document.getElementById("loadNewsButton");
+      const newsContainer = document.getElementById("newsContainer");
+
+      loadNewsButton.addEventListener("click", () => {
+        loadNewsButton.disabled = true;
+        newsContainer.innerText = "Загрузка новостей...";
+
+        fetchNews()
+          .then((data) => {
+            newsContainer.innerText = data;
+          })
+          .catch((error) => {
+            newsContainer.innerText = "Ошибка: " + error.message;
+          })
+          .finally(() => {
+            loadNewsButton.disabled = false;
+          });
+      });
+    </script>
+  </body>
+</html>
