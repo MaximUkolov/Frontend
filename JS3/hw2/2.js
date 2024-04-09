@@ -95,21 +95,11 @@ function renderProducts() {
 function addReview(productId) {
   const reviewInput = document.getElementById(`reviewInput${productId}`);
   const reviewText = reviewInput.value;
-  const btnEl = document.querySelector(".btnAdd");
-  const inputEl = document.querySelector("input");
 
-  if (inputEl.value.length < 5 || inputEl.value.length > 500) {
-    alert("Отзыв должен быть от 5 до 500 символов");
-    btnEl.disabled = true;
-    inputEl.value = "";
-    btnEl.disabled = false;
+  if (reviewText.length < 5 || reviewText.length > 15) {
+    alert('Отзыв должен быть от 5 до 15 символов');
     return;
   }
-
-  // if (reviewText.length < 5 || reviewText.length > 500) {
-  //   alert("Отзыв должен быть от 5 до 500 символов");
-  //   return;
-  // }
 
   const product = initialData.find((product) => product.id === productId);
   const newReview = { id: uid(), text: reviewText };
