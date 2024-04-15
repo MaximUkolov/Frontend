@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ToDo Приложение</h1>
+      <div class="addList">
+        <input type="text" id="taskInput" placeholder="Введите задачу" />
+        <button id="addTaskBtn">Добавить задачу</button>
+      </div>
+
+      <div id="tasks">
+        <h2>Невыполненные задачи</h2>
+        <ul id="todoList"></ul>
+
+        <h2>Выполненные задачи</h2>
+        <div class="comp">
+          <img class="imgEl" src="./img/check_14022885.png" alt="done" hidden>
+          <ul id="completedList"></ul>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
