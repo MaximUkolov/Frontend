@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Просмотр отзывов</title>
+</head>
+<body>
+<h1>Отзывы о продуктах</h1>
+<div id="reviewsList"></div>
+
+<script>
+function showReviews(productName) {
+    let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    const productReviews = reviews.filter(review => review.productName === productName);
+
+    let reviewsList = document.getElementById('reviewsList');
+    reviewsList.innerHTML = '';
+
+    productReviews.forEach(review => {
+        let reviewDiv = document.createElement('div');
+        reviewDiv.innerHTML = `<strong>${review.productName}</strong>: ${review.reviewText} 
+        <button onclick="deleteReview('${review.productName}', '${review.reviewText}')">Удалить</button>`;
+        reviewsList.appendChild(reviewDiv);
+    });
+}
+
+function deleteReview(productName, reviewText) {
+    let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    reviews = reviews.filter(review => !(review.productName === productName && review.reviewText === reviewText));
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+    showReviews(productName);
+}
+
+let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+let products = [...new Set(reviews.map(review => review.productName))];
+
+products.forEach(product => {
+    let productButton = document.createElement('button');
+    productButton.textContent = `Показать отзывы для продукта "${product}"`;
+    productButton.addEventListener('click', function() {
+        showReviews(product);
+        if (productButton.textContent.includes('Показать')) {
+            productButton.textContent = `Скрыть отзывы для продукта "${product}"`;
+        } else {
+            reviewsList.innerHTML = '';
+            productButton.textContent = `Показать отзывы для продукта "${product}"`;
+        }
+    });
+    document.body.appendChild(productButton);
+});
+</script>
+</body>
+</html>
