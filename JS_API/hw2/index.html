@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Веб-слайдер</title>
+<style>
+    body {
+        width: 50%;
+        height: 50%;
+    }
+</style>
+<script src="script.js" defer></script>
+</head>
+<body>
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="image1.jpg" alt="Изображение 1"></div>
+    <div class="slide"><img src="image2.jpg" alt="Изображение 2"></div>
+    <div class="slide"><img src="image3.jpg" alt="Изображение 3"></div>
+  </div>
+  <div class="navigation">
+    <button onclick="prevSlide()">Предыдущее</button>
+    <div class="indicators">
+
+    </div>
+    <button onclick="nextSlide()">Следующее</button>
+  </div>
+</div>
+
+</body>
+</html>
