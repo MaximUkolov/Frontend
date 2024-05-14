@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.comment {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.commentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+@keyframes slideme {
+  0% {
+      left: -30px;
+      margin-left: 0px;
+  }
+  30% {
+      left: 110%;
+      margin-left: 80px;
+  }
+  100% {
+      left: 110%;
+      margin-left: 80px;
+  }
+}
+
+.btn-new {
+  overflow: hidden;
+  position: relative;
+  max-height: 70px;
+  background-color: #fb616e;
+}
+
+.btn-new:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 60px;
+  height: 100px;
+  background-color: #ffffff;
+  filter: blur(30px);
+  transform: skewX(30deg) translateZ(0);
+  transition: 1s;
+  animation-name: slideme;
+  animation-duration: 3s;
+  animation-delay: 0.05s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
